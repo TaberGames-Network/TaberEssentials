@@ -1,4 +1,4 @@
-package com.thetabergroup.tessentials.com.thetabergroup.tessentials.commands;
+package com.thetabergroup.tessentials.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
