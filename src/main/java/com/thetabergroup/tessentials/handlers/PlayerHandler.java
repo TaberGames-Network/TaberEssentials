@@ -1,9 +1,8 @@
-package com.thetabergroup.tessentials.com.thetabergroup.tessentials.handlers;
+package com.thetabergroup.tessentials.handlers;
 
 import com.thetabergroup.tessentials.taberessentials;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.io.IOException;

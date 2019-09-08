@@ -1,4 +1,4 @@
-package com.thetabergroup.tessentials.com.thetabergroup.tessentials.listeners;
+package com.thetabergroup.tessentials.listeners;
 
 import com.thetabergroup.tessentials.taberessentials;
 import org.bukkit.configuration.file.FileConfiguration;
