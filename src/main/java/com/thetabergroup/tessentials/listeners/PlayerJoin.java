@@ -29,15 +29,6 @@ public class PlayerJoin implements Listener {
 
         if(config.getBoolean("notifyMailOnJoin")){
 
-            if(taberessentials.instance.newMail > 0){
-
-                player.sendMessage(instance.chatFormat + "You have " + instance.newMail + " new messages in your inbox.");
-
-            }else if(taberessentials.instance.newMail == 0){
-
-                player.sendMessage(instance.chatFormat + "You have no new mail.");
-
-            }
 
         }
 
