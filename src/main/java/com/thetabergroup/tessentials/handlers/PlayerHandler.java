@@ -11,7 +11,7 @@ public class PlayerHandler {
 
     private static taberessentials instance;
 
-    public void SetupPlayer(Player p){
+    public static void SetupPlayer(Player p){
 
 
 
@@ -25,13 +25,27 @@ public class PlayerHandler {
         yml.addDefault("First Location:", p.getLocation());
         yml.addDefault("###########################", null);
         yml.addDefault("Notifications:", null);
-        yml.addDefault("NotificationAmount:" , instance.notificationDefault);
+        yml.addDefault("notifAmount:" , instance.notificationDefault);
+        yml.addDefault("notif1:" , null);
+        yml.addDefault("notif2:" , null);
+        yml.addDefault("notif3:" , null);
+
         yml.options().copyDefaults();
         try{
             yml.save(f);
         }catch (IOException e){
             e.printStackTrace();
         }
+
+    }
+
+
+    public static void getPlayerNotification(Player p){
+
+          File f = new File("plugins/taberessentials/playerdata" + p.getName() + ".yml");
+        YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
+
+        yml.getInt("notifAmount:");
 
     }
 
