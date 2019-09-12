@@ -51,7 +51,7 @@ public class Notifications implements CommandExecutor {
                 //Friends
                 ItemStack friends = new ItemStack(Material.BOOK, 1);
                 ItemMeta friendsMeta = party.getItemMeta();
-                friendsMeta.setDisplayName(ChatColor.RED + "Parties");
+                friendsMeta.setDisplayName(ChatColor.RED + "Friends");
                 friends.setItemMeta(friendsMeta);
 
                 //Inventory Item Layout

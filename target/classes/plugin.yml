@@ -6,3 +6,5 @@ description: complete rewrite and optimization of essentials.
 commands:
     notifications:
         description: notification manager (beta)
+    gamemode:
+        description: gamemode manager (beta)
