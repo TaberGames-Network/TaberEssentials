@@ -9,44 +9,42 @@ import java.io.IOException;
 
 public class PlayerHandler {
 
-    private static taberessentials instance;
+private int DefaultNotifAmount = 0;
 
-    public static void SetupPlayer(Player p){
+    public void SetupPlayer(Player p) {
 
 
+        File f = new File("plugins/TaberEssentials/playerdata/" + p.getUniqueId() + ".yml");
+        if (!f.exists()) {
+            try {
+                f.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
+            yml.addDefault("Name", p.getName());
+            yml.addDefault("notifAmount", DefaultNotifAmount);
 
-         File f = new File("plugins/taberessentials/playerdata" + p.getName() + ".yml");
-         YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
-        yml.addDefault("Name:", p.getName());
-        yml.addDefault("Last Played:", p.getLastPlayed());
-        yml.addDefault("Bed Spawn Location:", p.getBedSpawnLocation());
-        yml.addDefault("Most Recent Killer:", p.getKiller());
-        yml.addDefault("Current Gamemode:", p.getGameMode());
-        yml.addDefault("First Location:", p.getLocation());
-        yml.addDefault("###########################", null);
-        yml.addDefault("Notifications:", null);
-        yml.addDefault("notifAmount:" , instance.notificationDefault);
-        yml.addDefault("notif1:" , null);
-        yml.addDefault("notif2:" , null);
-        yml.addDefault("notif3:" , null);
+            yml.options().copyDefaults(true);
+            try {
+                yml.save(f);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        yml.options().copyDefaults();
-        try{
-            yml.save(f);
-        }catch (IOException e){
-            e.printStackTrace();
         }
 
-    }
 
 
-    public static void getPlayerNotification(Player p){
 
-          File f = new File("plugins/taberessentials/playerdata" + p.getName() + ".yml");
+
+    public static int getNotifications(Player p){
+
+        File f = new File("plugins/taberessentials/playerdata" + p.getUniqueId() + ".yml");
         YamlConfiguration yml = YamlConfiguration.loadConfiguration(f);
 
-        yml.getInt("notifAmount:");
-
+        return yml.getInt("notifAmount:");
     }
 
 }

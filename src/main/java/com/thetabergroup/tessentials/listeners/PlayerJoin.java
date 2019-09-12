@@ -1,19 +1,21 @@
 package com.thetabergroup.tessentials.listeners;
 
+import com.thetabergroup.tessentials.handlers.PlayerHandler;
 import com.thetabergroup.tessentials.taberessentials;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerJoin implements Listener {
 
-        private static taberessentials instance;
-
+/*
+    @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
-
-        FileConfiguration config = instance.getConfig();
         Player player = e.getPlayer();
+        PlayerHandler.SetupPlayer(player);
+
 
         //Fly Disable on Join Check:
         if(config.getBoolean("disableFlyOnJoin")) {
@@ -36,5 +38,5 @@ public class PlayerJoin implements Listener {
 
 
     }
-
+*/
 }
