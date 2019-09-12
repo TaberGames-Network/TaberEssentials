@@ -1,3 +1,4 @@
 com\thetabergroup\tessentials\guis\GameModeGUI.class
 com\thetabergroup\tessentials\events\InventoryClick.class
+com\thetabergroup\tessentials\commands\Fly.class
 com\thetabergroup\tessentials\commands\Gamemode.class

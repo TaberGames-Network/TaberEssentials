@@ -1,5 +1,6 @@
 package com.thetabergroup.tessentials;
 
+import com.thetabergroup.tessentials.commands.Fly;
 import com.thetabergroup.tessentials.commands.Gamemode;
 import com.thetabergroup.tessentials.commands.Notifications;
 import com.thetabergroup.tessentials.events.InventoryClick;
@@ -36,6 +37,7 @@ public class taberessentials extends JavaPlugin implements Listener{
         Bukkit.getPluginManager().registerEvents(new InventoryClick(), this);
         this.getCommand("notifications").setExecutor((CommandExecutor)new Notifications());
         this.getCommand("gamemode").setExecutor((CommandExecutor)new Gamemode());
+        this.getCommand("fly").setExecutor((CommandExecutor)new Fly());
         config.addDefault("disableFlyOnJoin", true);
         config.addDefault("notifyMailOnJoin", true);
         config.options().copyDefaults(true);

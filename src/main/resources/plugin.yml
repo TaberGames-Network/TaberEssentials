@@ -8,3 +8,5 @@ commands:
         description: notification manager (beta)
     gamemode:
         description: gamemode manager (beta)
+    fly:
+        description: fly command
