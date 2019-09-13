@@ -7,6 +7,9 @@ commands:
     notifications:
         description: notification manager (beta)
     gamemode:
+        aliases: [gm, gmode]
         description: gamemode manager (beta)
     fly:
         description: fly command
+    heal:
+        description: heal command

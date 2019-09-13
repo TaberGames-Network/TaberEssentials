@@ -3,6 +3,7 @@ package com.thetabergroup.tessentials.commands;
 import com.thetabergroup.tessentials.guis.GameModeGUI;
 import com.thetabergroup.tessentials.taberessentials;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -35,13 +36,13 @@ public class Gamemode implements CommandExecutor {
                     creative.setItemMeta(creativeMeta);
 
                     //Party
-                    ItemStack survival = new ItemStack(Material.WOOD_SPADE, 1);
+                    ItemStack survival = new ItemStack(Material.COOKED_BEEF, 1);
                     ItemMeta survivalMeta = survival.getItemMeta();
                     survivalMeta.setDisplayName(ChatColor.RED + "Survival");
                     survival.setItemMeta(survivalMeta);
 
                     //Friends
-                    ItemStack adventure = new ItemStack(Material.WOOD_SWORD, 1);
+                    ItemStack adventure = new ItemStack(Material.DIAMOND_SWORD, 1);
                     ItemMeta adventureMeta = adventure.getItemMeta();
                     adventureMeta.setDisplayName(ChatColor.RED + "Adventure");
                     adventure.setItemMeta(adventureMeta);
@@ -58,6 +59,24 @@ public class Gamemode implements CommandExecutor {
                     i.setItem(8, empty);
 
                     player.openInventory(i);
+
+                }else if(args.length > 0){
+                    if(args.toString().equalsIgnoreCase("survival") || args.toString().equalsIgnoreCase("s") || args.toString().equalsIgnoreCase("0") ){
+                        player.setGameMode(GameMode.SURVIVAL);
+                        player.sendMessage(taberessentials.chatFormat + " Gamemode has been set to " + ChatColor.GOLD + "survival.");
+
+                    }
+                    if(args.toString().equalsIgnoreCase("creative") || args.toString().equalsIgnoreCase("c") || args.toString().equalsIgnoreCase("1") ){
+                        player.setGameMode(GameMode.CREATIVE);
+                        player.sendMessage(taberessentials.chatFormat + " Gamemode has been set to " + ChatColor.GOLD + "creative.");
+
+                    }
+                    if(args.toString().equalsIgnoreCase("adventure") || args.toString().equalsIgnoreCase("a") || args.toString().equalsIgnoreCase("2") ){
+                        player.setGameMode(GameMode.ADVENTURE);
+                        player.sendMessage(taberessentials.chatFormat + " Gamemode has been set to " + ChatColor.GOLD + "adventure.");
+
+                    }
+
 
                 }
 

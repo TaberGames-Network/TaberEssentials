@@ -2,6 +2,7 @@ package com.thetabergroup.tessentials;
 
 import com.thetabergroup.tessentials.commands.Fly;
 import com.thetabergroup.tessentials.commands.Gamemode;
+import com.thetabergroup.tessentials.commands.Heal;
 import com.thetabergroup.tessentials.commands.Notifications;
 import com.thetabergroup.tessentials.events.InventoryClick;
 import com.thetabergroup.tessentials.handlers.PlayerHandler;
@@ -38,6 +39,7 @@ public class taberessentials extends JavaPlugin implements Listener{
         this.getCommand("notifications").setExecutor((CommandExecutor)new Notifications());
         this.getCommand("gamemode").setExecutor((CommandExecutor)new Gamemode());
         this.getCommand("fly").setExecutor((CommandExecutor)new Fly());
+        this.getCommand("heal").setExecutor((CommandExecutor)new Heal());
         config.addDefault("disableFlyOnJoin", true);
         config.addDefault("notifyMailOnJoin", true);
         config.options().copyDefaults(true);
