@@ -400,7 +400,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         Player player = getPlayer(sender.getName());
         if(args.length <= 0)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /delhome <home> - Deletes a home");
+            sender.sendMessage(msgPrefix + "Usage: /delhome <home> - Deletes a home");
             return true;
         }
         if(player.getName().equalsIgnoreCase(sender.getName()))
@@ -429,7 +429,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         Player player = getPlayer(sender.getName());
         if(!sender.hasPermission("CF.cfmod.admin"))
         {
-            sender.sendMessage(ChatColor.RED + "You don't have permission to perform this command.");
+            sender.sendMessage(msgPrefix + "You don't have permission to perform this command.");
             return true;
         }
         if(args.length >= 1)
@@ -443,7 +443,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         }
         else
         {
-            player.sendMessage(ChatColor.RED + "Usage: /setjail <jailname> - Sets a jail at your current location");
+            player.sendMessage(msgPrefix + "Usage: /setjail <jailname> - Sets a jail at your current location");
         }
         return true;
     }
@@ -452,12 +452,12 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     {
         if(!hasPermission(sender))
         {
-            sender.sendMessage(ChatColor.RED + "You don't have permission to perform this command.");
+            sender.sendMessage(msgPrefix + "You don't have permission to perform this command.");
             return true;
         }
         if(args.length < 2)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /jail <player> <jail> - Jails <player> in <jail>");
+            sender.sendMessage(msgPrefix + "Usage: /jail <player> <jail> - Jails <player> in <jail>");
             return true;
         }
         if(jailMap.containsKey(args[1].toLowerCase()))
@@ -488,7 +488,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         }
         if(args.length < 1)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /unjail <player> - Unjails a player");
+            sender.sendMessage(msgPrefix + "Usage: /unjail <player> - Unjails a player");
             return true;
         }
         if(playerMap.containsKey(args[0].toLowerCase()))
