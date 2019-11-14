@@ -1,128 +1,128 @@
-name: CFEssentials
-main: com.craftingfactions.diego.CFEssentials.CFEssentials
-version: 1.0a
+name: TaberEssentials
+main: taberessentials.core.CFEssentials
+version: 2.0a
 commands:
   tpa:
     description: Sends a teleport request to tp to a player.
     usage: |
-           /tpa <playername>.
+      /tpa <playername>.
   tpo:
     description: Teleports you to a player.
     usage: |
-           /tpo <playername>.
+      /tpo <playername>.
   tpaccept:
     description: Accepts a teleport request.
     usage: |
-           /tpaccept
+      /tpaccept
   tpahere:
     description: Sends a teleport request to tp to a player.
     usage: |
-           /tpahere <playername>
+      /tpahere <playername>
   tpohere:
     description: Teleports a player to you.
     usage: |
-           /tpohere <playername>
+      /tpohere <playername>
   spawn:
     description: Teleports to spawn.
     usage: |
-           /spawn
+      /spawn
   home:
     description: Teleports to a home.
     usage: |
-           /home <homename> (optional)
+      /home <homename> (optional)
   sethome:
     description: Sets a home.
     usage: |
-           /sethome <homename> (optional)
+      /sethome <homename> (optional)
   delhome:
     description: Deletes a home.
     usage: |
-           /delhome <homename>
+      /delhome <homename>
   homelist:
     description: Prints a list of your homes.
     usage: |
-           /homelist
+      /homelist
   setjail:
     description: Sets a jail.
     usage: |
-           /setjail <jailname>
+      /setjail <jailname>
   jail:
     description: Jails a player.
     usage: |
-           /jail <player> <jail>
+      /jail <player> <jail>
   unjail:
     description: Unjails a player.
     usage: |
-           /unjail <player>
+      /unjail <player>
   jaillist:
     description: Prints a list of jails.
     usage: |
-           /jaillist
+      /jaillist
   deljail:
     description: Deletes a jail.
     usage: |
-           /deljail <jail>
+      /deljail <jail>
   mute:
     description: Mutes a player.
     usage: |
-           /mute <player>
+      /mute <player>
   unmute:
     description: Unmutes a player.
     usage: |
-           /unmute <player>
+      /unmute <player>
   broadcast:
     description: Broadcasts a message.
     usage: |
-           /broadcast <message>
+      /broadcast <message>
   list:
     description: Prints a list of online players.
     usage: |
-           /list
+      /list
   help:
     description: Prints a list of commands.
     usage: |
-           /help
+      /help
   gm:
     description: Switches gamemodes.
     usage: |
-           /gm <player> <gamemode> or /gm <gamemode>
+      /gm <player> <gamemode> or /gm <gamemode>
   invsee:
     description: Shows the inventory of a player.
     usage: |
-           /invsee <player>
+      /invsee <player>
   setmotd:
     description: Sets the motd.
     usage: |
-           /setmotd <message>
+      /setmotd <message>
   setspawn:
     description: Sets the spawn on the current world.
     usage: |
-           /setspawn
+      /setspawn
   nick:
     description: Sets the nickname for a player.
     usage: |
-           /nick <player> <nickname>
+      /nick <player> <nickname>
   motd:
     description: Shows the server motd.
     usage: |
-           /motd
+      /motd
   delnick:
     description: Deletes the nickname of a player.
     usage: |
-           /delnick <player>
+      /delnick <player>
   msg:
     description: Sends a private message to a player.
     usage: |
-           /msg <player> <message>
+      /msg <player> <message>
   r:
     description: Reply to the last player who sent you a message.
     usage: |
-           /r <message>
+      /r <message>
   kit:
     description: Gives a kit to a player.
     usage: |
-           /kit <kit>
+      /kit <kit>
   rules:
     description: Shows a list of rules.
     usage: |
-           /rules
+      /rules

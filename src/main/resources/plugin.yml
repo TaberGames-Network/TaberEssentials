@@ -1,0 +1,128 @@
+name: TaberEssentials
+main: taberessentials.core.CFEssentials
+version: 2.0a
+commands:
+  tpa:
+    description: Sends a teleport request to tp to a player.
+    usage: |
+      /tpa <playername>.
+  tpo:
+    description: Teleports you to a player.
+    usage: |
+      /tpo <playername>.
+  tpaccept:
+    description: Accepts a teleport request.
+    usage: |
+      /tpaccept
+  tpahere:
+    description: Sends a teleport request to tp to a player.
+    usage: |
+      /tpahere <playername>
+  tpohere:
+    description: Teleports a player to you.
+    usage: |
+      /tpohere <playername>
+  spawn:
+    description: Teleports to spawn.
+    usage: |
+      /spawn
+  home:
+    description: Teleports to a home.
+    usage: |
+      /home <homename> (optional)
+  sethome:
+    description: Sets a home.
+    usage: |
+      /sethome <homename> (optional)
+  delhome:
+    description: Deletes a home.
+    usage: |
+      /delhome <homename>
+  homelist:
+    description: Prints a list of your homes.
+    usage: |
+      /homelist
+  setjail:
+    description: Sets a jail.
+    usage: |
+      /setjail <jailname>
+  jail:
+    description: Jails a player.
+    usage: |
+      /jail <player> <jail>
+  unjail:
+    description: Unjails a player.
+    usage: |
+      /unjail <player>
+  jaillist:
+    description: Prints a list of jails.
+    usage: |
+      /jaillist
+  deljail:
+    description: Deletes a jail.
+    usage: |
+      /deljail <jail>
+  mute:
+    description: Mutes a player.
+    usage: |
+      /mute <player>
+  unmute:
+    description: Unmutes a player.
+    usage: |
+      /unmute <player>
+  broadcast:
+    description: Broadcasts a message.
+    usage: |
+      /broadcast <message>
+  list:
+    description: Prints a list of online players.
+    usage: |
+      /list
+  help:
+    description: Prints a list of commands.
+    usage: |
+      /help
+  gm:
+    description: Switches gamemodes.
+    usage: |
+      /gm <player> <gamemode> or /gm <gamemode>
+  invsee:
+    description: Shows the inventory of a player.
+    usage: |
+      /invsee <player>
+  setmotd:
+    description: Sets the motd.
+    usage: |
+      /setmotd <message>
+  setspawn:
+    description: Sets the spawn on the current world.
+    usage: |
+      /setspawn
+  nick:
+    description: Sets the nickname for a player.
+    usage: |
+      /nick <player> <nickname>
+  motd:
+    description: Shows the server motd.
+    usage: |
+      /motd
+  delnick:
+    description: Deletes the nickname of a player.
+    usage: |
+      /delnick <player>
+  msg:
+    description: Sends a private message to a player.
+    usage: |
+      /msg <player> <message>
+  r:
+    description: Reply to the last player who sent you a message.
+    usage: |
+      /r <message>
+  kit:
+    description: Gives a kit to a player.
+    usage: |
+      /kit <kit>
+  rules:
+    description: Shows a list of rules.
+    usage: |
+      /rules
