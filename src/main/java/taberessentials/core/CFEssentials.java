@@ -44,6 +44,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     public static String motd = ""; // Store in DB
     public static String maindirectory = "plugins/CFEssentials/";
     public static CFEssentialsConfig config;
+    public static String msgPrefix = ChatColor.RED + "[" + ChatColor.YELLOW + "CraftCadia" + ChatColor.RED + "] " + ChatColor.WHITE;
 
     @Override
     public void onEnable()
@@ -90,7 +91,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
             if(playerMap.get(event.getPlayer().getName().toLowerCase()).isNew)
             {
                 playerMap.put(event.getPlayer().getName().toLowerCase(), playerMap.get(event.getPlayer().getName().toLowerCase()).setNew(false));
-                getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "Hey everyone, fresh meat! " + event.getPlayer().getName() + " seems a little lost!");
+                getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + event.getPlayer().getName() + ChatColor.GRAY + " just joined for the first time.");
             }
 
             if(playerMap.get(event.getPlayer().getName().toLowerCase()).nickname != null)
@@ -212,7 +213,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     {
         if(args.length <= 0)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /tpa <playername> - Teleports you to <playername>");
+            sender.sendMessage(msgPrefix + "Usage: /tpa <playername> - Teleports you to <playername>");
             return true;
         }
 
@@ -237,7 +238,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     {
         if(args.length <= 0)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /tpahere <playername> - Teleports <playername> to you.");
+            sender.sendMessage(msgPrefix + "Usage:  /tpahere <playername> - Teleports <playername> to you.");
             return true;
         }
 
@@ -261,7 +262,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     {
         if(args.length <= 0)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /tpo <playername> - Teleports you to <playername>");
+            sender.sendMessage(msgPrefix + "Usage:  /tpo <playername> - Teleports you to <playername>");
             return true;
         }
 
@@ -286,7 +287,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
     {
         if(args.length <= 0)
         {
-            sender.sendMessage(ChatColor.RED + "Usage: /tpohere <playername> - Teleports <playername> to you.");
+            sender.sendMessage(msgPrefix + "Usage:  /tpohere <playername> - Teleports <playername> to you.");
             return true;
         }
 
@@ -315,7 +316,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
             {
                 if(player.getWorld().getName().equalsIgnoreCase("world_battle"))
                 {
-                    player.sendMessage(ChatColor.RED + "You can't accept teleport requests while in the Battle Dome.");
+                    player.sendMessage(msgPrefix + "You can't accept teleport requests while in the Battle Dome.");
                     return true;
                 }
                 if(playerMap.get(player.getName().toLowerCase()).hasPendingTeleportRequest)
@@ -336,7 +337,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
                 }
                 else
                 {
-                    sender.sendMessage(ChatColor.RED + "You don't have any pending teleport requests.");
+                    sender.sendMessage(msgPrefix + "You don't have any pending teleport requests.");
                 }
                 return true;
             }
@@ -359,7 +360,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         {
             if(player.getWorld().getName().equalsIgnoreCase("world_battle"))
             {
-                player.sendMessage(ChatColor.RED + "You can't set your home while in the Battle Dome.");
+                player.sendMessage(msgPrefix + "You can't set your home while in the Battle Dome.");
                 return true;
             }
             if(player.getName().equalsIgnoreCase(sender.getName()))
@@ -381,7 +382,7 @@ public class CFEssentials extends JavaPlugin implements Listener, CommandExecuto
         {
             if(player.getWorld().getName().equalsIgnoreCase("world_battle"))
             {
-                player.sendMessage(ChatColor.RED + "You can't teleport to your home while in the Battle Dome.");
+                player.sendMessage(msgPrefix + "You can't teleport to your home while in the Battle Dome.");
                 return true;
             }
 
